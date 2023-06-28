@@ -1,13 +1,11 @@
-import React, { Component } from "react";
-// import PropTypes from "prop-types";
+import React from "react";
 import { Link } from "react-router-dom";
-export class Navbar extends Component {
-  static propTypes = {};
 
-  render() {
-    return (
-      <nav className="navbar navbar-expand-lg bg-primary bg-body-primary text-white">
-        <div className="container-fluid ">
+const NavBar = () => {
+  return (
+    <div>
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             NewsRat
           </Link>
@@ -30,41 +28,37 @@ export class Navbar extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/business">
+                <Link className="nav-link" to="/business">
                   Business
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  aria-current="page"
-                  to="/entertainment"
-                >
+                <Link className="nav-link" to="/entertainment">
                   Entertainment
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/general">
+                <Link className="nav-link" to="/general">
                   General
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/health">
+                <Link className="nav-link" to="/health">
                   Health
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/science">
+                <Link className="nav-link" to="/science">
                   Science
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/sports">
+                <Link className="nav-link" to="/sports">
                   Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/technology">
+                <Link className="nav-link" to="/technology">
                   Technology
                 </Link>
               </li>
@@ -72,8 +66,8 @@ export class Navbar extends Component {
           </div>
         </div>
       </nav>
-    );
-  }
-}
+    </div>
+  );
+};
 
-export default Navbar;
+export default NavBar;
